@@ -1,0 +1,41 @@
+<%- include("partials/header")  %>
+<div class="jumbotron">
+    <h1>Listado Estudiantes</h1>
+
+</div>
+<div>
+    <a href="/agregar" class="btn btn-primary mb-2">Agregar Estudiante</a>
+</div>
+<!--Tabla de estudiantes-->
+<div class="col-12 ">
+    <table id="example" class="table table-striped table-bordered" style="width:100%">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Carnet</th>
+                <th>DPI</th>
+                <th>Correo</th>
+                <th>Semestre</th>
+                <th>Año</th>
+                <th>Grupo #</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% privados.forEach(privado => { %>
+            <tr>
+                <td><%= privado.nombre %></td>
+                <td><%= privado.carne %></td>
+                <td><%= privado.dpi %></td>
+                <td><%= privado.correo %></td>
+                <td><%= privado.semestre %></td>
+                <td><%= privado.anio %></td>
+                <td><%= privado.numerogrupo %></td>
+                
+            </tr>
+            <% })%>
+        </tbody>
+    </table>
+</div>
+<!--Fin tabla estudiantes-->
+<%- include("partials/footer")  %>
+<%- include("partials/script")  %>

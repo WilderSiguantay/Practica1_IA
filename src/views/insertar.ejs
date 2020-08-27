@@ -1,0 +1,61 @@
+<%- include("partials/header")  %>
+<div class="jumbotron">
+    <h1>Ingresar Estudiante</h1>
+
+</div>
+
+<div class="col-8">
+    <form method="post" action="/insertar">
+        <div class="form-group">
+            <label for="nombre">Nombre</label>
+            <input required id="nombre" placeholder="Nombre del estudiante" class="form-control" type="text"
+                name="nombre">
+        </div>
+        <div class="form-group row">
+            <div class="col-6">
+                <label for="carne">Carnet</label>
+                <input required id="carne" placeholder="Carnet del estudiante" class="form-control" type="number"
+                name="carne">
+            </div>
+            
+            <div class="col-6">
+                <label for="dpi">Documento de Identificacion</label>
+                <input required id="dpi" placeholder="DPI del estudiante" class="form-control" type="number" name="dpi">
+            </div>
+            
+        </div>
+        <div class="form-group">
+            
+        </div>
+        <div class="form-group">
+            <label for="email">Correo</label>
+            <input required id="email" placeholder="email@ejemplo.com" class="form-control" type="email"
+                name="email">
+        </div>
+        <div class="form-group row">
+            <div class="col-4">
+                <label for="semestre">Semestre</label>
+                <input required id="semestre" placeholder="Numero Semestre" class="form-control" type="number"
+                name="semestre">
+            </div>
+            <div class="col-4">
+                <label for="anio">Año</label>
+                <input required id="anio" placeholder="Año" class="form-control" type="number" name="anio">
+            </div>
+            <div class="col-4">
+                <label for="grupo">Grupo</label>
+                <input required id="grupo" placeholder="Grupo al que pertenecerá" class="form-control" type="number" name="grupo">
+            </div>
+            
+        </div>
+        <div class="form-group">
+            <button class="btn btn-success">Guardar</button>
+            &nbsp;<a href="/" class="btn btn-primary">Volver</a>
+        </div>
+    </form>
+</div>
+
+
+<!--Fin tabla estudiantes-->
+<%- include("partials/footer")  %>
+<%- include("partials/script")  %>
